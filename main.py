@@ -1,3 +1,7 @@
+import os
+from re import compile, findall
+from time import time, ctime
+
 from aiogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
@@ -10,10 +14,6 @@ from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.storage.memory import MemoryStorage
 import asyncio
 from aiogram import Dispatcher, Bot, F, types
-import os
-from re import compile, findall
-from time import time, ctime
-
 from dotenv import load_dotenv
 from sqlalchemy import DECIMAL, Column, Integer, String
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
